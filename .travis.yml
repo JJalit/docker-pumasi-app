@@ -6,10 +6,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t jaeha23/react-test-app -f ./frontend/Dockerfile.dev ./frontend
+  - docker build -t jaeha23/docker-pumasi-app -f ./frontend/Dockerfile.dev ./frontend
 
 script:
-  - docker run -e CI=true jaeha23/react-test-app npm run test
+  - docker run -e CI=true jaeha23/docker-pumasi-app npm run test
 
 after_success:
   - docker build -t jaeha23/docker-frontend ./frontend
