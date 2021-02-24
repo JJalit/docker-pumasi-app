@@ -1,4 +1,4 @@
-FROM node:12
+FROM novemberde/node-pm2
 
 WORKDIR /app
 

@@ -1,4 +1,4 @@
-FROM node:12 as builder
+FROM novemberde/node-pm2 as builder
 WORKDIR /app
 COPY ./package.json ./
 RUN npm install
