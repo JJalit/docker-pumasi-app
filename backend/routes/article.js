@@ -3,8 +3,6 @@ const router = express.Router();
 const { Image } = require("../models/Image");
 var ffmpeg = require("fluent-ffmpeg");
 
-// const { Article } = require("../models/Article");
-
 const { auth } = require("../middleware/auth");
 const multer = require("multer");
 // STORAGE MULTER CONFIG
