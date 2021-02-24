@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "react boiler plate",
+  "description": "",
   "main": "index.js",
   "engine": {
     "node": "10.16.0",
