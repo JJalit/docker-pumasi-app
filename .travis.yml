@@ -23,10 +23,10 @@ after_success:
   - docker push jaeha23/docker-nginx
 deploy:
   provider: elasticbeanstalk
-  region: ""
+  region: "ap-northeast-2"
   app: "docker-pumasi-app"
-  env: "DockerFullstackApp-env"
-  bucket_name:
+  env: "Dockerpumasiapp-env-1"
+  bucket_name: elasticbeanstalk-ap-northeast-2-638665892116
   bucket_path: "docker-pumasi-app"
   on:
     branch: main
