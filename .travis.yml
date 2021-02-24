@@ -21,15 +21,15 @@ after_success:
   - docker push jaeha23/docker-frontend
   - docker push jaeha23/docker-backend
   - docker push jaeha23/docker-nginx
-# deploy:
-#   provider: elasticbeanstalk
-#   region: ""
-#   app: "docker-pumasi-app"
-#   env: "DockerFullstackApp-env"
-#   bucket_name:
-#   bucket_path: "docker-pumasi-app"
-#   on:
-#     branch: main
+deploy:
+  provider: elasticbeanstalk
+  region: ""
+  app: "docker-pumasi-app"
+  env: "DockerFullstackApp-env"
+  bucket_name:
+  bucket_path: "docker-pumasi-app"
+  on:
+    branch: main
 
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: $AWS_SECRET_ACCESS_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
