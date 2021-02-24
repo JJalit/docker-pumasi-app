@@ -1,0 +1,32 @@
+.manageImage a > img {
+  width: 100%;
+  height: 16vw;
+}
+
+@media screen and (max-width: 1280px) {
+  .manageImage a > img {
+    width: 100%;
+    height: 19vw;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .manageImage a > img {
+    width: 100%;
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .manageImage a > img {
+    width: 100%;
+    height: 30vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .manageImage a > img {
+    width: 100%;
+    height: 50vw;
+  }
+}
