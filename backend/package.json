@@ -12,7 +12,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "John ahn",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.6",
