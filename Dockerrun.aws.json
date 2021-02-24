@@ -6,14 +6,31 @@
       "image": "jaeha23/docker-frontend",
       "hostname": "frontend",
       "essential": false,
-      "memory": 128
+      "memory": 128,
+      "command": ["tail", "-f", "/bin/bash"]
     },
     {
       "name": "backend",
       "image": "jaeha23/docker-backend",
       "hostname": "backend",
       "essential": false,
-      "memory": 128
+      "links": ["mongo"],
+      "memory": 128,
+      "command": ["tail", "-f", "/bin/bash"]
+    },
+    {
+      "name": "mongo",
+      "image": "jaeha23/docker-mongo",
+      "hostname": "mongo",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 27017,
+          "containerPort": 27017
+        }
+      ],
+      "memory": 128,
+      "command": ["tail", "-f", "/bin/bash"]
     },
     {
       "name": "nginx",
@@ -27,7 +44,8 @@
         }
       ],
       "links": ["frontend", "backend"],
-      "memory": 128
+      "memory": 128,
+      "command": ["tail", "-f", "/bin/bash"]
     }
   ]
 }

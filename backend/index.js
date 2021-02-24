@@ -10,12 +10,15 @@ const config = require("./config/key");
 
 const mongoose = require("mongoose");
 const connect = mongoose
-  .connect(config.mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  })
+  .connect(
+    "mongodb+srv://jaeha23:dlwogk23@boilerplate.rw3qb.mongodb.net/snspumasi?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    }
+  )
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 

@@ -18,12 +18,23 @@ services:
       - "3000:80"
 
   backend:
+    links:
+      - mongo
     build:
       dockerfile: Dockerfile.dev
       context: ./backend
-    container_name: app_backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
     volumes:
       - /app/node_modules
       - ./backend:/app
-    environment:
-      - MONGO_URI="mongodb+srv://jaeha23:dlwogk23@boilerplate.rw3qb.mongodb.net/snspumasi?retryWrites=true&w=majority"
+
+  mongo:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./mongo
+    ports:
+      - "27017:27017"

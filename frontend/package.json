@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,10 +21,7 @@
     "redux": "^4.0.0",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "yup": "^0.27.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2"
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^9.3.2",
     "http-proxy-middleware": "^1.0.6"
   }
 }
